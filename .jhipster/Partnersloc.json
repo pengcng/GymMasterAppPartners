@@ -1,0 +1,70 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "gymmasterapppartners",
+  "relationships": [
+    {
+      "relationshipName": "partners",
+      "otherEntityName": "partners",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "companyName",
+      "otherEntityRelationshipName": "partnersloc"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "region",
+      "fieldType": "regionEnum",
+      "fieldValues": "C,E,N,NE,W",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMinlength": "3",
+      "fieldValidateRulesMaxlength": "66"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "max"],
+      "fieldValidateRulesMax": "6"
+    },
+    {
+      "fieldName": "openTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "closeTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pocName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pocNo",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pocEmail",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+    }
+  ],
+  "changelogDate": "20210327175906",
+  "dto": "mapstruct",
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl",
+  "entityTableName": "partnersloc",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "pagination",
+  "microserviceName": "gymmasterapppartners"
+}

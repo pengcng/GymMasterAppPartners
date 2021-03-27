@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.gymmasterapppartners.app"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "microservice",
+    "baseName": "gymmasterapppartners",
+    "packageName": "com.gymmasterapppartners.app",
+    "packageFolder": "com/gymmasterapppartners/app",
+    "serverPort": "5102",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "oracle",
+    "prodDatabaseType": "oracle",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NmVmNWMyZGI4NjNmOWZlOTM3YjkxNDM3YTNmNDVjNWI1MTg5YjBkNDVjNDZlNTM1NzMxNGEyYzJjNWM4MDk4Nzc4OWMxMDA3M2FiNDJiZThkMzNkMzk0ZjdhZWI1ZmMzY2I0OWEyN2U0ODI0OTMzZGY1MjQ4ZjM1YTAwYjBkOWU=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1616864377504,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true,
+    "lastLiquibaseTimestamp": 1616867946000
+  }
+}

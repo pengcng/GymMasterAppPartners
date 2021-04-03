@@ -20,7 +20,7 @@ public class PartnerslocDTO implements Serializable {
     private String address;
 
     @NotNull
-    @Max(value = 6)
+    @Max(value = 999999)
     private Integer postalCode;
 
     @NotNull

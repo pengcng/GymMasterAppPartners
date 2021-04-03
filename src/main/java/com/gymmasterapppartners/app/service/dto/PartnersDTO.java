@@ -15,7 +15,7 @@ public class PartnersDTO implements Serializable {
     private String companyName;
 
     @NotNull
-    @Size(min = 6, max = 30)
+    @Size(max = 30)
     private String userName;
 
     @NotNull

@@ -37,7 +37,7 @@ public class Partnersloc implements Serializable {
     private String address;
 
     @NotNull
-    @Max(value = 6)
+    @Max(value = 999999)
     @Column(name = "postal_code", nullable = false)
     private Integer postalCode;
 

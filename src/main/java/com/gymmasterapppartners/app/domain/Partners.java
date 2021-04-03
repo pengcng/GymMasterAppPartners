@@ -30,7 +30,7 @@ public class Partners implements Serializable {
     private String companyName;
 
     @NotNull
-    @Size(min = 6, max = 30)
+    @Size(max = 30)
     @Column(name = "user_name", length = 30, nullable = false, unique = true)
     private String userName;
 

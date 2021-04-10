@@ -44,6 +44,8 @@ public class PartnerslocDTO implements Serializable {
 
     private String partnersCompanyName;
     
+    private String partnersUserName;
+    
     public Long getId() {
         return id;
     }
@@ -131,6 +133,14 @@ public class PartnerslocDTO implements Serializable {
     public void setPartnersCompanyName(String partnersCompanyName) {
         this.partnersCompanyName = partnersCompanyName;
     }
+    
+    public String getPartnersUserName() {
+        return partnersUserName;
+    }
+
+    public void setPartnersUserName(String partnersUserName) {
+        this.partnersUserName = partnersUserName;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -164,6 +174,7 @@ public class PartnerslocDTO implements Serializable {
             ", pocEmail='" + getPocEmail() + "'" +
             ", partnersId=" + getPartnersId() +
             ", partnersCompanyName='" + getPartnersCompanyName() + "'" +
+            ", partnersUserName='" + getPartnersUserName() + "'" +
             "}";
     }
 }

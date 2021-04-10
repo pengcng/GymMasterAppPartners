@@ -14,6 +14,7 @@ public interface PartnerslocMapper extends EntityMapper<PartnerslocDTO, Partners
 
     @Mapping(source = "partners.id", target = "partnersId")
     @Mapping(source = "partners.companyName", target = "partnersCompanyName")
+    @Mapping(source = "partners.userName", target = "partnersUserName")
     PartnerslocDTO toDto(Partnersloc partnersloc);
 
     @Mapping(source = "partnersId", target = "partners")

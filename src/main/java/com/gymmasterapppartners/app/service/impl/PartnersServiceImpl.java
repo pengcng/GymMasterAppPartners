@@ -65,6 +65,14 @@ public class PartnersServiceImpl implements PartnersService {
         return partnersRepository.findById(id)
             .map(partnersMapper::toDto);
     }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public PartnersDTO findByUserName(String username) {
+        log.debug("Request to get Partners : {}", username);
+        
+        return partnersMapper.toDto(partnersRepository.findByUserName(username));
+    }
 
     @Override
     public void delete(Long id) {

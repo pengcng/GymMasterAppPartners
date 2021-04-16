@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unused")
 @Repository
 public interface PartnersRepository extends JpaRepository<Partners, Long> {
+	Partners findByUserName(String username);
 }

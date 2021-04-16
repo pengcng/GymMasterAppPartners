@@ -60,7 +60,16 @@ public class PartnersResource {
         if (partnersDTO.getId() != null) {
             throw new BadRequestAlertException("A new partners cannot already have an ID", ENTITY_NAME, "idexists");
         }
+        
+        PartnersDTO userNameResult = new PartnersDTO();
+        userNameResult = partnersService.findByUserName(partnersDTO.getUserName());
+        System.out.println("REST request to get username from Partners :" + userNameResult);
+        if(userNameResult != null) {
+        	throw new BadRequestAlertException("Partner has already created for this account", ENTITY_NAME, "usernameexists");
+        }       
+        
         PartnersDTO result = partnersService.save(partnersDTO);
+        System.out.println("Saving information :" + result);
         return ResponseEntity.created(new URI("/api/partners/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);

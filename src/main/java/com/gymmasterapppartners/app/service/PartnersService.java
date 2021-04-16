@@ -36,6 +36,14 @@ public interface PartnersService {
      * @return the entity.
      */
     Optional<PartnersDTO> findOne(Long id);
+    
+    /**
+     * Get the "id" partners.
+     *
+     * @param id the id of the entity.
+     * @return the entity.
+     */
+    PartnersDTO findByUserName(String username);
 
     /**
      * Delete the "id" partners.
